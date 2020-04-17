@@ -1,0 +1,2945 @@
+- id: 75ffde17.33cb8
+  type: tab
+  label: dbmanager
+  disabled: false
+  info: ''
+- id: f2b2d2c8.3cfa2
+  type: tab
+  label: Flow 1
+  disabled: false
+  info: ''
+- id: 76bc20aa.0e9
+  type: tab
+  label: NVR
+  disabled: false
+  info: ''
+- id: ac2074e1.d38e88
+  type: subflow
+  name: table
+  info: ''
+  category: ''
+  in:
+    - x: 60
+      'y': 260
+      wires:
+        - id: 3b97cb96.cccd54
+  out:
+    - x: 520
+      'y': 260
+      wires:
+        - id: d9a25df6.2c93
+          port: 0
+  env: []
+  color: '#DDAA99'
+- id: 5cac0c00.3c5414
+  type: subflow
+  name: iterate
+  info: ''
+  category: ''
+  in:
+    - x: 220
+      'y': 219
+      wires:
+        - id: 6306e487.b64a9c
+  out:
+    - x: 454
+      'y': 174
+      wires:
+        - id: 6306e487.b64a9c
+          port: 0
+    - x: 455
+      'y': 259
+      wires:
+        - id: 6306e487.b64a9c
+          port: 1
+  env: []
+  color: '#DDAA99'
+- id: e8ad3ffb.5129f
+  type: ui_base
+  theme:
+    name: theme-light
+    lightTheme:
+      default: '#0094CE'
+      baseColor: '#0094CE'
+      baseFont: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif'
+      edited: true
+      reset: false
+    darkTheme:
+      default: '#097479'
+      baseColor: '#097479'
+      baseFont: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif'
+      edited: false
+    customTheme:
+      name: Untitled Theme 1
+      default: '#4B7930'
+      baseColor: '#4B7930'
+      baseFont: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif'
+    themeState:
+      base-color:
+        default: '#0094CE'
+        value: '#0094CE'
+        edited: false
+      page-titlebar-backgroundColor:
+        value: '#0094CE'
+        edited: false
+      page-backgroundColor:
+        value: '#fafafa'
+        edited: false
+      page-sidebar-backgroundColor:
+        value: '#ffffff'
+        edited: false
+      group-textColor:
+        value: '#1bbfff'
+        edited: false
+      group-borderColor:
+        value: '#ffffff'
+        edited: false
+      group-backgroundColor:
+        value: '#ffffff'
+        edited: false
+      widget-textColor:
+        value: '#111111'
+        edited: false
+      widget-backgroundColor:
+        value: '#0094ce'
+        edited: false
+      widget-borderColor:
+        value: '#ffffff'
+        edited: false
+      base-font:
+        value: '-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif'
+    angularTheme:
+      primary: indigo
+      accents: blue
+      warn: red
+      background: grey
+  site:
+    name: Node-RED Dashboard
+    hideToolbar: 'false'
+    allowSwipe: 'false'
+    lockMenu: 'false'
+    allowTempTheme: 'true'
+    dateFormat: DD/MM/YYYY
+    sizes:
+      sx: 48
+      sy: 48
+      gx: 6
+      gy: 6
+      cx: 6
+      cy: 6
+      px: 0
+      py: 0
+- id: 1d7259f7.ca0ef6
+  type: ui_tab
+  name: Tab 1
+  icon: dashboard
+  order: 1
+- id: b0e9959d.fd3bf8
+  type: ui_group
+  name: Group 1
+  tab: 1d7259f7.ca0ef6
+  order: 1
+  disp: true
+  width: 6
+- id: db61afe4.5e194
+  type: ui_tab
+  z: ''
+  name: DBManager
+  icon: dashboard
+  order: 2
+  disabled: false
+  hidden: false
+- id: ea43bc58.bb24c
+  type: sqlitedb
+  z: ''
+  db: 'C:\Users\Norbi\.node-red\pg1.db'
+  mode: RWC
+- id: c146385b.10c428
+  type: ui_group
+  z: ''
+  name: Table Search
+  tab: db61afe4.5e194
+  disp: true
+  width: '20'
+  collapse: false
+- id: e036895.8134178
+  type: ui_group
+  z: ''
+  name: Frame Grab
+  tab: 45e23410.79338c
+  order: 1
+  disp: true
+  width: '6'
+- id: d743cec.891cd3
+  type: ui_group
+  z: ''
+  name: Frame Statistics
+  tab: 45e23410.79338c
+  order: 2
+  disp: true
+  width: '6'
+- id: 76aa30ec.44202
+  type: ui_group
+  z: ''
+  name: Video Capture
+  tab: 45e23410.79338c
+  order: 3
+  disp: true
+  width: '6'
+- id: c9626ef.839809
+  type: ui_group
+  z: ''
+  name: Video Statistics
+  tab: 45e23410.79338c
+  order: 4
+  disp: true
+  width: '6'
+- id: b4cda5cd.1ca3d8
+  type: sqlitedb
+  z: 0
+  db: /home/pi/sqlite/nodered
+- id: f6f03a06.f02e28
+  type: ui_group
+  z: ''
+  name: Report
+  tab: 45e23410.79338c
+  order: 5
+  disp: true
+  width: '12'
+- id: 45e23410.79338c
+  type: ui_tab
+  z: ''
+  name: NVR
+  icon: dashboard
+  order: 13
+- id: cb57d5ea.b140c8
+  type: ui_text
+  z: f2b2d2c8.3cfa2
+  group: b0e9959d.fd3bf8
+  order: 0
+  width: 0
+  height: 0
+  name: teadsafa
+  label: Testsadsadsadsad
+  format: '{{msg.payload}}'
+  layout: col-center
+  x: 540
+  'y': 300
+  wires: []
+- id: 86771b1a.5eec78
+  type: debug
+  z: f2b2d2c8.3cfa2
+  name: ''
+  active: true
+  tosidebar: true
+  console: false
+  tostatus: false
+  complete: payload
+  targetType: msg
+  x: 530
+  'y': 200
+  wires: []
+- id: 12fc6555.ad42fb
+  type: http in
+  z: f2b2d2c8.3cfa2
+  name: ''
+  url: /hello-file
+  method: get
+  upload: false
+  swaggerDoc: ''
+  x: 250
+  'y': 380
+  wires:
+    - - d6db8508.8a3448
+- id: d6db8508.8a3448
+  type: file in
+  z: f2b2d2c8.3cfa2
+  name: ''
+  filename: /tmp/test.csv
+  format: ''
+  x: 410
+  'y': 380
+  wires:
+    - - df8b3437.79e158
+- id: df8b3437.79e158
+  type: change
+  z: f2b2d2c8.3cfa2
+  name: Set Headers
+  rules:
+    - t: set
+      p: headers
+      pt: msg
+      to: '{}'
+      tot: json
+    - t: set
+      p: headers.content-type
+      pt: msg
+      to: "\ttext/csv"
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 610
+  'y': 380
+  wires:
+    - - 5981caa2.497c34
+- id: 5981caa2.497c34
+  type: http response
+  z: f2b2d2c8.3cfa2
+  name: ''
+  statusCode: ''
+  headers: {}
+  x: 750
+  'y': 380
+  wires: []
+- id: 5b46a701.c2ab58
+  type: inject
+  z: f2b2d2c8.3cfa2
+  name: make request
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 250
+  'y': 480
+  wires:
+    - - 47bdf20e.9e149c
+- id: 47bdf20e.9e149c
+  type: http request
+  z: f2b2d2c8.3cfa2
+  name: ''
+  method: GET
+  ret: txt
+  paytoqs: false
+  url: 'https://nodered.org'
+  tls: ''
+  persist: false
+  proxy: ''
+  authType: ''
+  x: 414.5
+  'y': 480
+  wires:
+    - - b1ff3496.8badc8
+- id: bd5c6d43.910fd
+  type: debug
+  z: f2b2d2c8.3cfa2
+  name: ''
+  active: true
+  console: 'false'
+  complete: 'false'
+  x: 770
+  'y': 480
+  wires: []
+- id: b1ff3496.8badc8
+  type: html
+  z: f2b2d2c8.3cfa2
+  name: ''
+  property: ''
+  tag: .node-red-latest-version
+  ret: text
+  as: single
+  x: 591.5
+  'y': 480
+  wires:
+    - - bd5c6d43.910fd
+- id: 6fc19294.4de8bc
+  type: http response
+  z: f2b2d2c8.3cfa2
+  name: ''
+  x: 650
+  'y': 580
+  wires: []
+- id: 54840c45.e63964
+  type: template
+  z: f2b2d2c8.3cfa2
+  name: page
+  field: payload
+  fieldType: msg
+  format: handlebars
+  syntax: mustache
+  template: |-
+    <html>
+        <head></head>
+        <body>
+            <h1>Hello {{req.params.name}}!</h1>
+        </body>
+    </html>
+  x: 510
+  'y': 580
+  wires:
+    - - 6fc19294.4de8bc
+- id: abd55121.75cf3
+  type: http in
+  z: f2b2d2c8.3cfa2
+  name: ''
+  url: '/hello-param/:name'
+  method: get
+  upload: false
+  swaggerDoc: ''
+  x: 310
+  'y': 580
+  wires:
+    - - 54840c45.e63964
+- id: 89bc4fae.ab16a
+  type: function
+  z: 75ffde17.33cb8
+  name: test
+  func: |-
+    msg.topic = "SELECT name FROM sqlite_master \
+      WHERE type IN ('table','view') AND name NOT LIKE 'sqlite_%' \
+    UNION ALL \
+    SELECT name FROM sqlite_temp_master \
+      WHERE type IN ('table','view') \
+    ORDER BY 1;"; 
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 310
+  'y': 220
+  wires:
+    - - 277bbfd0.9d3d7
+- id: 277bbfd0.9d3d7
+  type: sqlite
+  z: 75ffde17.33cb8
+  mydb: ea43bc58.bb24c
+  sqlquery: msg.topic
+  sql: ''
+  name: read tables
+  x: 470
+  'y': 220
+  wires:
+    - - a34249f0.1048a8
+- id: a34249f0.1048a8
+  type: function
+  z: 75ffde17.33cb8
+  name: ''
+  func: |-
+    node.warn(msg.payload);
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 630
+  'y': 220
+  wires:
+    - - fbca81f2.202e3
+- id: c3713b51.23c5d8
+  type: ui_button
+  z: 75ffde17.33cb8
+  name: ''
+  group: c146385b.10c428
+  order: 0
+  width: 0
+  height: 0
+  passthru: false
+  label: Search tables
+  tooltip: ''
+  color: white
+  bgcolor: '#000'
+  icon: ''
+  payload: ''
+  payloadType: str
+  topic: ''
+  x: 140
+  'y': 220
+  wires:
+    - - 89bc4fae.ab16a
+- id: 5c7c5c75.d53754
+  type: ui_template
+  z: 75ffde17.33cb8
+  group: c146385b.10c428
+  name: ''
+  order: 1
+  width: 0
+  height: 0
+  format: |-
+    <div id="val"></div>
+    <script>
+        (function(scope) {
+            scope.$watch('msg', function(msg) {
+                if(msg) {
+                    document.getElementById('val').innerHTML = "";
+                    for(var i = 0; i < msg.payload.length; i++) {
+                        document.getElementById('val').innerHTML += msg.payload[i].name + "<br>";
+                    }
+                }
+            })
+        })(scope);
+    </script>
+  storeOutMessages: true
+  fwdInMessages: true
+  templateScope: local
+  x: 1260
+  'y': 220
+  wires:
+    - []
+- id: d9a25df6.2c93
+  type: ui_button
+  z: ac2074e1.d38e88
+  name: ''
+  group: c146385b.10c428
+  order: 1
+  width: 0
+  height: 0
+  passthru: false
+  label: '{{msg.topic}}'
+  tooltip: ''
+  color: ''
+  bgcolor: ''
+  icon: ''
+  payload: ''
+  payloadType: str
+  topic: ''
+  x: 350
+  'y': 260
+  wires:
+    - []
+- id: 3b97cb96.cccd54
+  type: function
+  z: ac2074e1.d38e88
+  name: ''
+  func: |-
+    msg.topic = msg.payload.name;
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 190
+  'y': 260
+  wires:
+    - - d9a25df6.2c93
+- id: d6ee1e9a.49ffb
+  type: 'subflow:ac2074e1.d38e88'
+  z: 75ffde17.33cb8
+  name: ''
+  env: []
+  x: 850
+  'y': 180
+  wires:
+    - - fbca81f2.202e3
+- id: 6306e487.b64a9c
+  type: function
+  z: 5cac0c00.3c5414
+  name: Iterate
+  func: |-
+    //Node has 2 outputs - 1 for itteration and 1 for completion
+    var nextObj, out;
+    var itt = msg.iterationInfo;
+
+
+    //If the iterating has not yet begun set up the iteration metadata in the msg
+    if (typeof itt === 'undefined') {
+        //Make sure payload is an array
+        if( Object.prototype.toString.call(msg.payload) !== '[object Array]' ) {
+           msg.payload = [msg.payload];
+        }
+
+        msg.iterationInfo = itt = {};
+        itt.index = -1;
+        itt.inArray = msg.payload;
+        itt.outArray = [];
+
+    //Otherwise just push the input to the output array
+    } else {
+        itt.outArray.push(msg.payload)
+    }
+
+    //Goto next object
+    itt.index ++;
+
+    //If there are stil objects left to iterate goto the next one in the original array
+    if (itt.index < itt.inArray.length) {
+        nextObj = msg;
+        msg.payload = itt.inArray[itt.index];
+
+    //otherwise pass the out array as the payload
+    } else {
+        out = msg;
+        msg.payload = itt.outArray;
+        delete msg.iterationInfo;
+    }
+
+    return [nextObj, out];
+  outputs: '2'
+  noerr: 0
+  x: 347
+  'y': 220
+  wires:
+    - []
+    - []
+- id: fbca81f2.202e3
+  type: 'subflow:5cac0c00.3c5414'
+  z: 75ffde17.33cb8
+  name: ''
+  env: []
+  x: 850
+  'y': 280
+  wires:
+    - - d6ee1e9a.49ffb
+    - - 5c7c5c75.d53754
+- id: f20e7082.463fb
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: false
+  console: 'false'
+  complete: 'true'
+  x: 770
+  'y': 160
+  wires: []
+- id: 7ca2d61.449a128
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 100
+  'y': 140
+  wires:
+    - - 3e2e5355.04867c
+- id: b9477fd.950d78
+  type: exec
+  z: 76bc20aa.0e9
+  command: 'avconv -i rtsp://user:password@192.168.1.71:554/ch01.264 -frames 1 -qscale 1 -f image2 '
+  addpay: true
+  append: ''
+  useSpawn: 'false'
+  timer: ''
+  oldrc: false
+  name: Grab a frame
+  x: 530
+  'y': 80
+  wires:
+    - - 62cedcdd.be31f4
+      - a9947181.f447b
+      - aa402b90.8dfa78
+    - []
+    - - f20e7082.463fb
+      - d81ce308.cf28f
+- id: 62cedcdd.be31f4
+  type: ui_template
+  z: 76bc20aa.0e9
+  group: e036895.8134178
+  name: Static image
+  order: 2
+  width: 0
+  height: 0
+  format: |-
+    <div height="210" style="height: 210px;">
+    <img src="/grab.jpg"/ width="280"><br/>
+    <a href="/grab.jpg" target="_blank">Full screen</a>
+    </div>
+  storeOutMessages: true
+  fwdInMessages: true
+  templateScope: local
+  x: 790
+  'y': 40
+  wires:
+    - []
+- id: a9947181.f447b
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: false
+  console: 'false'
+  complete: 'true'
+  x: 770
+  'y': 80
+  wires: []
+- id: f5db1e7d.0dd22
+  type: file
+  z: 76bc20aa.0e9
+  name: ''
+  filename: /home/pi/avconv.out
+  appendNewline: true
+  createDir: false
+  overwriteFile: 'true'
+  x: 860
+  'y': 120
+  wires:
+    - []
+- id: d81ce308.cf28f
+  type: function
+  z: 76bc20aa.0e9
+  name: Statistics
+  func: >+
+    var now = new Date();
+
+    var stat = context.get("stat");
+
+    if (stat===undefined) {
+        // Initialize the object in case NR restart
+        stat = { "count": 0, "success": 0, "rate": 0.0, "last": now};
+    }
+
+    if (msg.topic==="reset") {
+        // Reset message was received: reset statistics
+        stat = { "count": 0, "success": 0, "rate": 0.0, "last": now};
+    } else {
+        // Update statistics
+        stat.count++;
+        if (msg.payload.code===0) {
+            stat.success++;
+        }    
+        stat.rate=stat.success/stat.count;
+        stat.last=now;
+    }
+
+
+    // Create formatted time
+
+    var yyyy = now.getFullYear();
+
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+
+    msg.formattedtime = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;
+
+    msg.success = stat.success;
+
+    msg.rate = Math.floor(stat.rate*100);
+
+
+    node.status({fill:"blue",shape:"ring",text:"Frames: "+msg.success+" | "+msg.rate+"% | Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":"
+    + ss});
+
+
+
+    // Saving data in the context
+
+    context.set("stat",stat);
+
+
+    return msg;
+
+
+  outputs: 1
+  noerr: 0
+  x: 680
+  'y': 280
+  wires:
+    - - ee2febab.8c4da8
+      - 307af27c.85ee4e
+      - 7b18df4b.203a9
+- id: e38e2b9c.aff248
+  type: inject
+  z: 76bc20aa.0e9
+  name: Reset stat
+  topic: reset
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 280
+  'y': 260
+  wires:
+    - - d81ce308.cf28f
+- id: ee2febab.8c4da8
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: d743cec.891cd3
+  order: 1
+  width: 0
+  height: 0
+  name: Last time
+  label: Last grab
+  format: '{{msg.formattedtime}}'
+  layout: row-spread
+  x: 1080
+  'y': 160
+  wires: []
+- id: 307af27c.85ee4e
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: d743cec.891cd3
+  order: 2
+  width: 0
+  height: 0
+  name: Frame count
+  label: Frames grabbed
+  format: '{{msg.success}}'
+  layout: row-spread
+  x: 1089.8999061584473
+  'y': 195.79998874664307
+  wires: []
+- id: 7b18df4b.203a9
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: d743cec.891cd3
+  order: 3
+  width: 0
+  height: 0
+  name: Success rate
+  label: Success rate
+  format: '{{msg.rate}} %'
+  layout: row-spread
+  x: 1090.8998794555664
+  'y': 233.79998207092285
+  wires: []
+- id: a0b6a9d8.088be8
+  type: ui_button
+  z: 76bc20aa.0e9
+  name: Refresh
+  group: e036895.8134178
+  order: 1
+  width: 0
+  height: 0
+  passthru: false
+  label: Refresh image
+  color: ''
+  bgcolor: ''
+  icon: ''
+  payload: ''
+  payloadType: str
+  topic: ''
+  x: 84.59999084472656
+  'y': 94.13333797454834
+  wires:
+    - - 3e2e5355.04867c
+- id: cf469e2a.01c3f
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: true
+  console: 'false'
+  complete: 'true'
+  x: 778.0000152587891
+  'y': 1040.0000228881836
+  wires: []
+- id: 23c5fa99.482f56
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 128.00001525878906
+  'y': 1000.0000228881836
+  wires:
+    - - d79099de.51ac98
+- id: d23bec7d.9fc11
+  type: exec
+  z: 76bc20aa.0e9
+  command: 'avconv -i rtsp://user:password@192.168.1.71:554/ch01.264 -r 10 -t 30 -y -vcodec copy -an '
+  addpay: true
+  append: ''
+  useSpawn: 'false'
+  timer: ''
+  oldrc: false
+  name: Capture video
+  x: 548.0000152587891
+  'y': 960.0000228881836
+  wires:
+    - - e13c9c21.a4a77
+      - a62bcf2a.b321c
+      - aa402b90.8dfa78
+    - - bdbc77f5.985238
+    - - cf469e2a.01c3f
+      - 46b094bb.07926c
+- id: e13c9c21.a4a77
+  type: ui_template
+  z: 76bc20aa.0e9
+  group: 76aa30ec.44202
+  name: Video link
+  order: 2
+  width: 0
+  height: 0
+  format: |-
+    <div height="70" style="height: 70px;">
+    <a href="/video.mp4" target="_blank">Open video</a>
+    </div>
+  storeOutMessages: true
+  fwdInMessages: true
+  templateScope: local
+  x: 788.0000152587891
+  'y': 920.0000228881836
+  wires:
+    - []
+- id: a62bcf2a.b321c
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: true
+  console: 'false'
+  complete: 'true'
+  x: 778.0000152587891
+  'y': 960.0000228881836
+  wires: []
+- id: bdbc77f5.985238
+  type: file
+  z: 76bc20aa.0e9
+  name: ''
+  filename: /home/pi/avconv.out
+  appendNewline: true
+  createDir: false
+  overwriteFile: 'true'
+  x: 828.0000152587891
+  'y': 1000.0000228881836
+  wires:
+    - []
+- id: 46b094bb.07926c
+  type: function
+  z: 76bc20aa.0e9
+  name: Statistics
+  func: >+
+    var now = new Date();
+
+    var stat = context.get("stat");
+
+    if (stat===undefined) {
+        // Initialize the object in case NR restart
+        stat = { "count": 0, "success": 0, "rate": 0.0, "last": now};
+    }
+
+    if (msg.topic==="reset") {
+        // Reset message was received: reset statistics
+        stat = { "count": 0, "success": 0, "rate": 0.0, "last": now};
+    } else {
+        // Update statistics
+        stat.count++;
+        if (msg.payload.code===0) {
+            stat.success++;
+        }    
+        stat.rate=stat.success/stat.count;
+        stat.last=now;
+    }
+
+
+    // Create formatted time
+
+    var yyyy = now.getFullYear();
+
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+
+    msg.formattedtime = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;
+
+    msg.success = stat.success;
+
+    msg.rate = Math.floor(stat.rate*100);
+
+
+    node.status({fill:"blue",shape:"ring",text:"Videos: "+msg.success+" | "+msg.rate+"% | Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":"
+    + ss});
+
+
+
+    // Saving data in the context
+
+    context.set("stat",stat);
+
+
+    return msg;
+
+
+  outputs: 1
+  noerr: 0
+  x: 668.0000152587891
+  'y': 1160.0000228881836
+  wires:
+    - - b4f306be.ed0398
+      - 73a37cd5.1330b4
+      - 99b910be.3859b
+- id: ad131cac.91f1c
+  type: inject
+  z: 76bc20aa.0e9
+  name: Reset stat
+  topic: reset
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 468.00001525878906
+  'y': 1160.0000228881836
+  wires:
+    - - 46b094bb.07926c
+- id: b4f306be.ed0398
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: c9626ef.839809
+  order: 1
+  width: 0
+  height: 0
+  name: Video Last time
+  label: Last grab
+  format: '{{msg.formattedtime}}'
+  layout: row-spread
+  x: 888.0000152587891
+  'y': 1080.0000228881836
+  wires: []
+- id: 73a37cd5.1330b4
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: c9626ef.839809
+  order: 2
+  width: 0
+  height: 0
+  name: Video count
+  label: Video files
+  format: '{{msg.success}}'
+  layout: row-spread
+  x: 878.0000152587891
+  'y': 1120.0000228881836
+  wires: []
+- id: 99b910be.3859b
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: c9626ef.839809
+  order: 3
+  width: 0
+  height: 0
+  name: Video Success rate
+  label: Success rate
+  format: '{{msg.rate}} %'
+  layout: row-spread
+  x: 898.0000152587891
+  'y': 1160.0000228881836
+  wires: []
+- id: ba0708a0.801cb8
+  type: ui_button
+  z: 76bc20aa.0e9
+  name: Capture
+  group: 76aa30ec.44202
+  order: 1
+  width: 0
+  height: 0
+  passthru: false
+  label: Capture video
+  color: ''
+  bgcolor: ''
+  icon: ''
+  payload: ''
+  payloadType: str
+  topic: ''
+  x: 112.60000610351562
+  'y': 954.1333608627319
+  wires:
+    - - d79099de.51ac98
+- id: 92a50b62.a36008
+  type: comment
+  z: 76bc20aa.0e9
+  name: Frame grabber
+  info: |-
+    This section of the flow is responsible for 
+    grabbing a single out of the RTSP feed of the IP
+    Camera. It uses avconv to do that which is part
+    of the libav-tools for raspberry pi.
+
+    The trigger can be an inject, or a UI button.
+    The statistic node keeps a track of the number of
+    grabbed frames and the success rate (when the
+    video conversion/grabbing was successful). The 
+    Statistic node also has a reset input which can 
+    be used to periodically reset the stats (e.g.
+    daily, weekly).
+
+    I directed the second output of the Exec node to
+    a file, as the output of the avconv is usually 
+    quite long and if there are errors you don't
+    see the entire output in the debug window, so in
+    that case just open to output and see what the issue
+    is.
+  x: 125.625
+  'y': 36.5000057220459
+  wires: []
+- id: 6aa485d.0a1587c
+  type: comment
+  z: 76bc20aa.0e9
+  name: Video capture
+  info: |-
+    This section of the flow captures a fixed length 
+    video of the RTSP feed.
+    It works very similar to the frame capture above,
+    the only main difference is the parameters in the
+    commmand line.
+  x: 118.00001525878906
+  'y': 900.0000228881836
+  wires: []
+- id: 3e2e5355.04867c
+  type: change
+  z: 76bc20aa.0e9
+  name: Set filename
+  rules:
+    - t: set
+      p: payload
+      pt: msg
+      to: /home/pi/node-red-static/grab.jpg
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 290
+  'y': 80
+  wires:
+    - - b9477fd.950d78
+- id: d79099de.51ac98
+  type: change
+  z: 76bc20aa.0e9
+  name: Set filename
+  rules:
+    - t: set
+      p: payload
+      pt: msg
+      to: /home/pi/node-red-static/video.mp4
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 298.00001525878906
+  'y': 960.0000228881836
+  wires:
+    - - d23bec7d.9fc11
+- id: 25fb3199.6524be
+  type: function
+  z: 76bc20aa.0e9
+  name: Frame grab
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "frame_"+yyyy+mm+dd+"-"+hh+mm+ss+".jpg";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "store";                                        // Flag to store this image in the DB
+    msg.type = "timelapse";                                     // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 310
+  'y': 380
+  wires:
+    - - b9477fd.950d78
+- id: a1a778a7.f7ac38
+  type: inject
+  z: 76bc20aa.0e9
+  name: Grab a frame
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 130
+  'y': 380
+  wires:
+    - - 25fb3199.6524be
+- id: afa00c58.486ec
+  type: function
+  z: 76bc20aa.0e9
+  name: Save to DB
+  func: |-
+    // only run this if the topic contains 'store', so the manual frame grabs do not get
+    // stored in the database
+    if (msg.topic.indexOf("store") !== -1) {
+
+        msg.topic = "INSERT INTO nvr (type,path,wwwpath,filename,epoch) " +
+                "VALUES ('"+msg.type+"','"+msg.path+"','"+msg.wwwpath+"','"+msg.file+"',"+msg.epoch+");";
+        
+        node.status({fill:"blue",shape:"ring",text:"Last update: "+msg.formatteddate});
+        
+        return msg;
+    }
+  outputs: 1
+  noerr: 0
+  x: 990
+  'y': 340
+  wires:
+    - - 78e36aee.4f4ef4
+- id: 78e36aee.4f4ef4
+  type: sqlite
+  z: 76bc20aa.0e9
+  mydb: b4cda5cd.1ca3d8
+  name: Node Red DB
+  x: 1180
+  'y': 340
+  wires:
+    - []
+- id: 672b7f61.69b94
+  type: function
+  z: 76bc20aa.0e9
+  name: Video capture
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "video_"+yyyy+mm+dd+"-"+hh+mm+ss+".mp4";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "store";                                        // Flag to store this image in the DB
+    msg.type = "videotest";                                     // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 328.00001525878906
+  'y': 1080.0000228881836
+  wires:
+    - - d23bec7d.9fc11
+- id: 621f82fc.4d118c
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 128.00001525878906
+  'y': 1080.0000228881836
+  wires:
+    - - 672b7f61.69b94
+- id: e1ada3c9.510c
+  type: function
+  z: 76bc20aa.0e9
+  name: Email image
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "frame_"+yyyy+mm+dd+"-"+hh+mm+ss+".jpg";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "store|email";                                  // Flag to store this image in the DB
+    msg.type = "front";                                         // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 310
+  'y': 420
+  wires:
+    - - b9477fd.950d78
+- id: 83f1a401.0397f8
+  type: inject
+  z: 76bc20aa.0e9
+  name: Email a pic
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 120
+  'y': 420
+  wires:
+    - - e1ada3c9.510c
+- id: aa402b90.8dfa78
+  type: function
+  z: 76bc20aa.0e9
+  name: Dummy
+  func: |-
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 780
+  'y': 380
+  wires:
+    - - afa00c58.486ec
+      - bf979f2c.8c70f
+      - 60efc7fe.5f14b8
+      - f6934139.f92ba
+      - 250be076.7d6cd
+- id: bf979f2c.8c70f
+  type: function
+  z: 76bc20aa.0e9
+  name: Compose email
+  func: |-
+    // only run this if the topic contains 'email', so other types do not get emailed
+    if (msg.topic.indexOf("email") !== -1) {
+
+        msg.filename = msg.path + msg.file;
+        
+        node.status({fill:"blue",shape:"ring",text:"Last update: "+msg.formatteddate});
+        
+        return msg;
+    }
+  outputs: 1
+  noerr: 0
+  x: 1000
+  'y': 400
+  wires:
+    - - e9eb6c11.05277
+- id: 5e0b0a98.5b5ec4
+  type: e-mail
+  z: 76bc20aa.0e9
+  server: smtp.gmail.com
+  port: '465'
+  secure: true
+  name: youremail@gmail.com
+  dname: Email notification
+  x: 1390
+  'y': 400
+  wires: []
+- id: e9eb6c11.05277
+  type: change
+  z: 76bc20aa.0e9
+  name: Set up email
+  rules:
+    - t: set
+      p: attachments
+      pt: msg
+      to: "[{\t    \"filename\": msg.file, \t    \"path\": msg.filename,\t    \"content\": $$.payload\t}]"
+      tot: jsonata
+    - t: set
+      p: topic
+      pt: msg
+      to: Front door motion
+      tot: str
+    - t: set
+      p: payload
+      pt: msg
+      to: 'Dear,<br><br>Motion has been detected at the front door<br>In attachment you can find a snapshot.<br><br>Kind regards,<br>Your Node-Red flow'
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 1190
+  'y': 400
+  wires:
+    - - 5e0b0a98.5b5ec4
+- id: b8b9fe1e.facca
+  type: comment
+  z: 76bc20aa.0e9
+  name: Image / Video Log
+  info: ''
+  x: 138.00000762939453
+  'y': 1664.0000324249268
+  wires: []
+- id: c16e6d20.b840e
+  type: template
+  z: 76bc20aa.0e9
+  name: Formatting
+  field: payload
+  fieldType: msg
+  format: handlebars
+  syntax: mustache
+  template: |
+    <table>
+        <tr><th>ID</th><th>Type</th><th>Timestamp</th><th>File</th></tr>
+        {{#payload}}
+            <tr class="">
+                <td>{{id}}</td>
+                <td>{{type}}</td>
+                <td>{{timestamp}}</td>
+                <td><a href="{{wwwpath}}{{filename}}" target="_blank">{{filename}}</a></td>
+            </tr>
+        {{/payload}}
+    </table>
+  x: 737.0000076293945
+  'y': 2039.0000324249268
+  wires:
+    - - 569bc15d.78f65
+- id: 8cd0cfea.81ef4
+  type: function
+  z: 76bc20aa.0e9
+  name: SQL
+  func: |-
+    context.set(msg.topic,msg.payload);
+
+    var d = new Date();
+    var epoch = d.getTime();
+    var fromdate = 0;
+    var enddate = 0;
+
+    msg.topic = "SELECT * FROM nvr WHERE id>0 ";
+
+    if (context.get("type")!==undefined) {
+        if (context.get("type")!=="*") {
+            msg.topic = msg.topic + " AND type = '"+context.get("type")+"'";
+        }
+    }
+
+    if (context.get("time")!==undefined) {
+        switch (context.get("time")) {
+            case 0:
+                fromdate = epoch - 1000*60*60*24;
+                msg.topic = msg.topic + " AND epoch > "+fromdate;
+                break;
+            case 1:
+                fromdate = epoch - 1000*60*60*24*7;
+                msg.topic = msg.topic + " AND epoch > "+fromdate;
+                break;
+            case 2:
+                fromdate = epoch - 1000*60*60*24*30;
+                msg.topic = msg.topic + " AND epoch > "+fromdate;
+                break;
+        }
+    }
+
+    // msg.topic = msg.topic.substring(0,msg.topic.length-2);
+    msg.topic = msg.topic+ " ORDER BY id";
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 324.00000762939453
+  'y': 2038.0000324249268
+  wires:
+    - - 9013719f.649c7
+- id: bb3967ed.548e48
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 157.00000762939453
+  'y': 2038.0000324249268
+  wires:
+    - - 8cd0cfea.81ef4
+- id: ef472bb1.6de9a8
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: true
+  x: 278.00000762939453
+  'y': 1904.0000324249268
+  wires:
+    - - e932eb6.cbfea18
+- id: e932eb6.cbfea18
+  type: change
+  z: 76bc20aa.0e9
+  name: Initial value
+  rules:
+    - t: set
+      p: payload
+      pt: msg
+      to: '0'
+      tot: num
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 458.00000762939453
+  'y': 1904.0000324249268
+  wires:
+    - - f10ebcbe.42e38
+- id: 1fa63bfd.c4f5e4
+  type: function
+  z: 76bc20aa.0e9
+  name: Process systems
+  func: |-
+    var output = [];
+    output.push({"All systems":"*"});
+    for (var i = 0; i < msg.payload.length; i++) {
+        obj = {};
+        obj [msg.payload[i].type]=msg.payload[i].type;
+        output.push(obj);
+    }
+    msg.options = output;
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 478.00000762939453
+  'y': 1784.0000324249268
+  wires:
+    - - 9f2c893.9107478
+- id: b1b12941.56b7f8
+  type: ui_button
+  z: 76bc20aa.0e9
+  name: ''
+  group: f6f03a06.f02e28
+  order: 1
+  width: '3'
+  height: '1'
+  passthru: false
+  label: Refresh
+  color: ''
+  bgcolor: ''
+  icon: ''
+  payload: ''
+  payloadType: str
+  topic: refresh
+  x: 668.0000076293945
+  'y': 1844.0000324249268
+  wires:
+    - - 8cd0cfea.81ef4
+- id: f10ebcbe.42e38
+  type: ui_dropdown
+  z: 76bc20aa.0e9
+  name: Time filter
+  label: ''
+  place: ''
+  group: f6f03a06.f02e28
+  order: 3
+  width: '4'
+  height: '1'
+  passthru: true
+  options:
+    - label: Last 24 hrs
+      value: 0
+      type: num
+    - label: Last 7 days
+      value: 1
+      type: num
+    - label: Last 30 days
+      value: 2
+      type: num
+    - label: All
+      value: 3
+      type: num
+  payload: ''
+  topic: time
+  x: 668.0000076293945
+  'y': 1904.0000324249268
+  wires:
+    - - 8cd0cfea.81ef4
+- id: 9f2c893.9107478
+  type: ui_dropdown
+  z: 76bc20aa.0e9
+  name: Type
+  label: ''
+  place: ''
+  group: f6f03a06.f02e28
+  order: 5
+  width: '5'
+  height: '1'
+  passthru: true
+  options:
+    - label: All
+      value: '*'
+      type: str
+    - label: timelapse
+      value: timelapse
+      type: str
+    - label: front
+      value: front
+      type: str
+    - label: videotest
+      value: videotest
+      type: str
+  payload: ''
+  topic: type
+  x: 678.0000076293945
+  'y': 1784.0000324249268
+  wires:
+    - - 8cd0cfea.81ef4
+- id: 569bc15d.78f65
+  type: ui_template
+  z: 76bc20aa.0e9
+  group: f6f03a06.f02e28
+  name: Log output
+  order: 6
+  width: 0
+  height: 0
+  format: '<div ng-bind-html="msg.payload" height="600" style="height: 600px;"><br/></div>'
+  storeOutMessages: true
+  fwdInMessages: true
+  templateScope: local
+  x: 958.0000076293945
+  'y': 2039.0000324249268
+  wires:
+    - []
+- id: 9013719f.649c7
+  type: sqlite
+  z: 76bc20aa.0e9
+  mydb: b4cda5cd.1ca3d8
+  name: Node Red DB
+  x: 532.0000076293945
+  'y': 2038.0000324249268
+  wires:
+    - - c16e6d20.b840e
+- id: 3a4f8bfa.546124
+  type: inject
+  z: 76bc20aa.0e9
+  name: Email 3 pics
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 130
+  'y': 460
+  wires:
+    - - 94f6c07d.bfe7b
+- id: 94f6c07d.bfe7b
+  type: function
+  z: 76bc20aa.0e9
+  name: 1st img
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "frame_"+yyyy+mm+dd+"-"+hh+mm+ss+".jpg";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "3mail/1|delete";                               // Flag to store this image in the DB
+    msg.type = "temp";                                          // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 300
+  'y': 460
+  wires:
+    - - 19e983b3.8ffd8c
+      - b9477fd.950d78
+- id: ca758cc9.ceaad
+  type: function
+  z: 76bc20aa.0e9
+  name: 2st img
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "frame_"+yyyy+mm+dd+"-"+hh+mm+ss+".jpg";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "3mail/2|delete";                               // Flag to store this image in the DB
+    msg.type = "temp";                                          // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 300
+  'y': 520
+  wires:
+    - - 87e6092a.065938
+      - b9477fd.950d78
+- id: ac89ca9.8d36338
+  type: function
+  z: 76bc20aa.0e9
+  name: 3rd img
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "frame_"+yyyy+mm+dd+"-"+hh+mm+ss+".jpg";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "3mail/3|delete";                               // Flag to store this image in the DB
+    msg.type = "temp";                                          // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 300
+  'y': 580
+  wires:
+    - - b9477fd.950d78
+- id: 19e983b3.8ffd8c
+  type: delay
+  z: 76bc20aa.0e9
+  name: ''
+  pauseType: delay
+  timeout: '15'
+  timeoutUnits: seconds
+  rate: '1'
+  nbRateUnits: '1'
+  rateUnits: second
+  randomFirst: '1'
+  randomLast: '5'
+  randomUnits: seconds
+  drop: false
+  x: 140
+  'y': 520
+  wires:
+    - - ca758cc9.ceaad
+- id: 87e6092a.065938
+  type: delay
+  z: 76bc20aa.0e9
+  name: ''
+  pauseType: delay
+  timeout: '15'
+  timeoutUnits: seconds
+  rate: '1'
+  nbRateUnits: '1'
+  rateUnits: second
+  randomFirst: '1'
+  randomLast: '5'
+  randomUnits: seconds
+  drop: false
+  x: 140
+  'y': 580
+  wires:
+    - - ac89ca9.8d36338
+- id: 60efc7fe.5f14b8
+  type: function
+  z: 76bc20aa.0e9
+  name: Compose email 3
+  func: |-
+    // only run this if the topic contains 'email', so other types do not get emailed
+    if (msg.topic.indexOf("3mail") !== -1) {
+
+        if (msg.topic.indexOf("/1") !== -1) {
+            context.set("file1", msg.path + msg.file);
+        }
+        if (msg.topic.indexOf("/2") !== -1) {
+            context.set("file2", msg.path + msg.file);
+        }
+        if (msg.topic.indexOf("/3") !== -1) {
+            msg.file3 = msg.path + msg.file;
+            msg.file1 = context.get("file1");
+            msg.file2 = context.get("file2");
+            msg.payload = msg.file1 + " " + msg.file2 + " " + msg.file3;
+            node.status({fill:"blue",shape:"ring",text:"Last update: "+msg.formatteddate});
+            return msg;
+        }
+        
+    }
+  outputs: 1
+  noerr: 0
+  x: 1010
+  'y': 460
+  wires:
+    - - db330a78.9a3b58
+- id: db330a78.9a3b58
+  type: change
+  z: 76bc20aa.0e9
+  name: Set up email
+  rules:
+    - t: set
+      p: attachments
+      pt: msg
+      to: "[{\t    \"filename\": \"Image1.jpg\", \t    \"path\": msg.file1,\t    \"content\": $$.payload\t},\t{\t    \"filename\": \"Image2.jpg\", \t    \"path\": msg.file2,\t    \"content\": $$.payload\t},\t{\t    \"filename\": \"Image3.jpg\", \t    \"path\": msg.file3,\t    \"content\": $$.payload\t}]"
+      tot: jsonata
+    - t: set
+      p: topic
+      pt: msg
+      to: Front door motion
+      tot: str
+    - t: set
+      p: payload
+      pt: msg
+      to: 'Dear,<br><br>Motion has been detected at the front door<br>In attachment you can find a 3 snapshots.<br><br>Kind regards,<br>Your Node-Red flow'
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 1190
+  'y': 460
+  wires:
+    - - 5e0b0a98.5b5ec4
+- id: 2ce2932f.4f244c
+  type: delay
+  z: 76bc20aa.0e9
+  name: ''
+  pauseType: delay
+  timeout: '15'
+  timeoutUnits: seconds
+  rate: '1'
+  nbRateUnits: '1'
+  rateUnits: second
+  randomFirst: '1'
+  randomLast: '5'
+  randomUnits: seconds
+  drop: false
+  x: 1200
+  'y': 520
+  wires:
+    - - 4b8888fd.76cb38
+- id: 4b8888fd.76cb38
+  type: exec
+  z: 76bc20aa.0e9
+  command: 'sudo rm '
+  addpay: true
+  append: ''
+  useSpawn: 'false'
+  timer: ''
+  oldrc: false
+  name: Delete images
+  x: 1380
+  'y': 520
+  wires:
+    - []
+    - []
+    - []
+- id: 9966e81.e776a18
+  type: sqlite
+  z: 76bc20aa.0e9
+  mydb: b4cda5cd.1ca3d8
+  name: Node Red DB
+  x: 508.00000762939453
+  'y': 1724.0000324249268
+  wires:
+    - - 1fa63bfd.c4f5e4
+- id: 832d3982.e4d0a8
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: 00 3 * * *
+  once: false
+  x: 138.00000762939453
+  'y': 1724.0000324249268
+  wires:
+    - - e94992c7.fbb7e
+- id: e94992c7.fbb7e
+  type: change
+  z: 76bc20aa.0e9
+  name: Set SQL
+  rules:
+    - t: set
+      p: topic
+      pt: msg
+      to: SELECT DISTINCT type from nvr
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 308.00000762939453
+  'y': 1724.0000324249268
+  wires:
+    - - 9966e81.e776a18
+- id: f6934139.f92ba
+  type: function
+  z: 76bc20aa.0e9
+  name: Delete pictures
+  func: |-
+    // only run this if the topic contains 'email', so other types do not get emailed
+    var send = false;
+    if (msg.topic.indexOf("delete") !== -1) {
+
+        msg.payload = msg.path + msg.file;
+        send = true;
+        if (msg.topic.indexOf("/1") !== -1) {
+            context.set("file1", msg.path + msg.file);
+            send = false;
+        }
+        if (msg.topic.indexOf("/2") !== -1) {
+            context.set("file2", msg.path + msg.file);
+            send = false;
+        }
+        if (msg.topic.indexOf("/3") !== -1) {
+            msg.file3 = msg.path + msg.file;
+            msg.file1 = context.get("file1");
+            msg.file2 = context.get("file2");
+            msg.payload = msg.file1 + " " + msg.file2 + " " + msg.file3;
+            send = true;
+        } 
+            
+        if (send) {
+            node.status({fill:"blue",shape:"ring",text:"Last update: "+msg.formatteddate});
+            return msg;
+        }
+
+        
+    }
+  outputs: 1
+  noerr: 0
+  x: 1000
+  'y': 520
+  wires:
+    - - 2ce2932f.4f244c
+- id: 250be076.7d6cd
+  type: function
+  z: 76bc20aa.0e9
+  name: Tweet image
+  func: |-
+    // only run this if the topic contains 'email', so other types do not get emailed
+    if (msg.topic.indexOf("tweet") !== -1) {
+
+        msg.filename = msg.path + msg.file;
+        
+        node.status({fill:"blue",shape:"ring",text:"Last update: "+msg.formatteddate});
+        
+        return msg;
+    }
+  outputs: 1
+  noerr: 0
+  x: 990
+  'y': 580
+  wires:
+    - - dfe76e34.e6528
+- id: 2a9135f2.e969ba
+  type: twitter out
+  z: 76bc20aa.0e9
+  twitter: ''
+  name: Tweet
+  x: 1510
+  'y': 580
+  wires: []
+- id: ef1525c1.30d9d8
+  type: change
+  z: 76bc20aa.0e9
+  name: Set up tweet
+  rules:
+    - t: set
+      p: media
+      pt: msg
+      to: payload
+      tot: msg
+    - t: set
+      p: payload
+      pt: msg
+      to: Image from the front door
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 1350
+  'y': 580
+  wires:
+    - - 2a9135f2.e969ba
+      - 37c03127.4f099e
+- id: dfe76e34.e6528
+  type: file in
+  z: 76bc20aa.0e9
+  name: Read image
+  filename: ''
+  format: utf8
+  chunk: false
+  sendError: false
+  x: 1170
+  'y': 580
+  wires:
+    - - ef1525c1.30d9d8
+      - c759e669.da37b8
+- id: d0aa7bc0.dfa678
+  type: inject
+  z: 76bc20aa.0e9
+  name: Tweet a frame
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 130
+  'y': 620
+  wires:
+    - - 1853b02f.24f0e
+- id: 1853b02f.24f0e
+  type: function
+  z: 76bc20aa.0e9
+  name: Frame grab
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "frame_"+yyyy+mm+dd+"-"+hh+mm+ss+".jpg";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "tweet|delete";                                 // Flag to store this image in the DB
+    msg.type = "timelapse";                                     // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 310
+  'y': 620
+  wires:
+    - - b9477fd.950d78
+- id: 9053b6b1.c3de88
+  type: inject
+  z: 76bc20aa.0e9
+  name: Grab a frame
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 810
+  'y': 640
+  wires:
+    - - 63dae1d8.516bf
+- id: 63dae1d8.516bf
+  type: change
+  z: 76bc20aa.0e9
+  name: Set filename
+  rules:
+    - t: set
+      p: filename
+      pt: msg
+      to: /home/pi/node-red-static/grab.jpg
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 1010
+  'y': 640
+  wires:
+    - - dfe76e34.e6528
+- id: c759e669.da37b8
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: true
+  console: 'false'
+  complete: 'true'
+  x: 1365.8571515764509
+  'y': 650.5714198521205
+  wires: []
+- id: 37c03127.4f099e
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: true
+  console: 'false'
+  complete: 'true'
+  x: 1550
+  'y': 640
+  wires: []
+- id: b80c0691.734728
+  type: comment
+  z: 76bc20aa.0e9
+  name: Delete old pictures
+  info: ''
+  x: 138.00000762939453
+  'y': 2124.0000324249268
+  wires: []
+- id: 9023a240.4f80e
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 128.00000762939453
+  'y': 2184.0000324249268
+  wires:
+    - - e7b184d.9ad6878
+- id: e7b184d.9ad6878
+  type: function
+  z: 76bc20aa.0e9
+  name: SQL (older than 30 days)
+  func: |-
+    var d = new Date();
+    var epoch = d.getTime();
+
+    // today - 30 days
+    var fromdate = epoch - 1000*60*60*24*30;
+
+    msg.topic = "SELECT * FROM nvr WHERE epoch < "+fromdate;
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 358.00000762939453
+  'y': 2184.0000324249268
+  wires:
+    - - 6e6abbe0.f632b4
+- id: 6e6abbe0.f632b4
+  type: sqlite
+  z: 76bc20aa.0e9
+  mydb: b4cda5cd.1ca3d8
+  name: Node Red DB
+  x: 608.0000076293945
+  'y': 2184.0000324249268
+  wires:
+    - - 26bb9f19.a13e3
+- id: c4b28d49.818b5
+  type: exec
+  z: 76bc20aa.0e9
+  command: 'sudo rm '
+  addpay: true
+  append: ''
+  useSpawn: 'false'
+  timer: ''
+  oldrc: false
+  name: Delete images
+  x: 1348.0000076293945
+  'y': 2184.0000324249268
+  wires:
+    - []
+    - []
+    - []
+- id: 26bb9f19.a13e3
+  type: split
+  z: 76bc20aa.0e9
+  name: ''
+  splt: \n
+  spltType: str
+  arraySplt: 1
+  arraySpltType: len
+  stream: false
+  addname: ''
+  x: 798.0000076293945
+  'y': 2184.0000324249268
+  wires:
+    - - 230ba582.e2820a
+- id: 230ba582.e2820a
+  type: delay
+  z: 76bc20aa.0e9
+  name: ''
+  pauseType: random
+  timeout: '5'
+  timeoutUnits: seconds
+  rate: '1'
+  nbRateUnits: '1'
+  rateUnits: second
+  randomFirst: '50'
+  randomLast: '500'
+  randomUnits: milliseconds
+  drop: false
+  x: 948.0000076293945
+  'y': 2184.0000324249268
+  wires:
+    - - 5421809.dcf088
+      - 8c7a5756.7576f8
+- id: 2238a44f.eeff5c
+  type: sqlite
+  z: 76bc20aa.0e9
+  mydb: b4cda5cd.1ca3d8
+  name: Node Red DB
+  x: 1348.0000076293945
+  'y': 2244.0000324249268
+  wires:
+    - []
+- id: 5421809.dcf088
+  type: change
+  z: 76bc20aa.0e9
+  name: Set SQL
+  rules:
+    - t: set
+      p: topic
+      pt: msg
+      to: '"DELETE * FROM nvr where filename=''" & payload.filename & "''"'
+      tot: jsonata
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 1128.0000076293945
+  'y': 2244.0000324249268
+  wires:
+    - - 2238a44f.eeff5c
+- id: 8c7a5756.7576f8
+  type: change
+  z: 76bc20aa.0e9
+  name: Set filename
+  rules:
+    - t: set
+      p: payload
+      pt: msg
+      to: payload.path & payload.filename
+      tot: jsonata
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 1138.0000076293945
+  'y': 2184.0000324249268
+  wires:
+    - - c4b28d49.818b5
+- id: cf36588c.4d7078
+  type: inject
+  z: 76bc20aa.0e9
+  name: Noon timelapse
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 138
+  'y': 706
+  wires:
+    - - f49a1d6f.b7cc2
+- id: f49a1d6f.b7cc2
+  type: function
+  z: 76bc20aa.0e9
+  name: Frame grab
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "noon_"+yyyy+mm+dd+"-"+hh+mm+ss+".jpg";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "store";                                        // Flag to store this image in the DB
+    msg.type = "Noon timelapse";                                     // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 308
+  'y': 706
+  wires:
+    - - b9477fd.950d78
+- id: 91f40d76.32918
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: true
+  console: 'false'
+  complete: 'true'
+  x: 1490
+  'y': 1460
+  wires: []
+- id: 9e78161f.f9afe8
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 840
+  'y': 1420
+  wires:
+    - - 9825d013.b8cae
+- id: 34496a78.56a486
+  type: exec
+  z: 76bc20aa.0e9
+  command: 'avconv -i rtsp://user:password@192.168.1.71:554/ch01.264 -r 10 -t 30 -y -vcodec copy -an '
+  addpay: true
+  append: ''
+  useSpawn: 'false'
+  timer: ''
+  oldrc: false
+  name: Capture video
+  x: 1260
+  'y': 1380
+  wires:
+    - - 7de939b0.323868
+      - a0b6f3d2.8c529
+    - - daa81010.14c1d
+    - - 91f40d76.32918
+      - 906c95d5.5429c8
+- id: 7de939b0.323868
+  type: ui_template
+  z: 76bc20aa.0e9
+  group: 76aa30ec.44202
+  name: Video link
+  order: 2
+  width: 0
+  height: 0
+  format: |-
+    <div height="70" style="height: 70px;">
+    <a href="/video.mp4" target="_blank">Open video</a>
+    </div>
+  storeOutMessages: true
+  fwdInMessages: true
+  templateScope: local
+  x: 1500
+  'y': 1340
+  wires:
+    - []
+- id: a0b6f3d2.8c529
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: true
+  console: 'false'
+  complete: 'true'
+  x: 1490
+  'y': 1380
+  wires: []
+- id: daa81010.14c1d
+  type: file
+  z: 76bc20aa.0e9
+  name: ''
+  filename: /home/pi/avconv.out
+  appendNewline: true
+  createDir: false
+  overwriteFile: 'true'
+  x: 1540
+  'y': 1420
+  wires:
+    - []
+- id: 906c95d5.5429c8
+  type: function
+  z: 76bc20aa.0e9
+  name: Statistics
+  func: >+
+    var now = new Date();
+
+    var stat = context.get("stat");
+
+    if (stat===undefined) {
+        // Initialize the object in case NR restart
+        stat = { "count": 0, "success": 0, "rate": 0.0, "last": now};
+    }
+
+    if (msg.topic==="reset") {
+        // Reset message was received: reset statistics
+        stat = { "count": 0, "success": 0, "rate": 0.0, "last": now};
+    } else {
+        // Update statistics
+        stat.count++;
+        if (msg.payload.code===0) {
+            stat.success++;
+        }    
+        stat.rate=stat.success/stat.count;
+        stat.last=now;
+    }
+
+
+    // Create formatted time
+
+    var yyyy = now.getFullYear();
+
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+
+    msg.formattedtime = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;
+
+    msg.success = stat.success;
+
+    msg.rate = Math.floor(stat.rate*100);
+
+
+    node.status({fill:"blue",shape:"ring",text:"Videos: "+msg.success+" | "+msg.rate+"% | Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":"
+    + ss});
+
+
+
+    // Saving data in the context
+
+    context.set("stat",stat);
+
+
+    return msg;
+
+
+  outputs: 1
+  noerr: 0
+  x: 1380
+  'y': 1580
+  wires:
+    - - 83073e02.4679e
+      - b3d2c447.015e58
+      - 5af362d4.f20e3c
+- id: 138f2ab3.838525
+  type: inject
+  z: 76bc20aa.0e9
+  name: Reset stat
+  topic: reset
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 1180
+  'y': 1580
+  wires:
+    - - 906c95d5.5429c8
+- id: 83073e02.4679e
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: c9626ef.839809
+  order: 1
+  width: 0
+  height: 0
+  name: Video Last time
+  label: Last grab
+  format: '{{msg.formattedtime}}'
+  layout: row-spread
+  x: 1600
+  'y': 1500
+  wires: []
+- id: b3d2c447.015e58
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: c9626ef.839809
+  order: 2
+  width: 0
+  height: 0
+  name: Video count
+  label: Video files
+  format: '{{msg.success}}'
+  layout: row-spread
+  x: 1590
+  'y': 1540
+  wires: []
+- id: 5af362d4.f20e3c
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: c9626ef.839809
+  order: 3
+  width: 0
+  height: 0
+  name: Video Success rate
+  label: Success rate
+  format: '{{msg.rate}} %'
+  layout: row-spread
+  x: 1610
+  'y': 1580
+  wires: []
+- id: 7997a321.f34abc
+  type: ui_button
+  z: 76bc20aa.0e9
+  name: Capture
+  group: 76aa30ec.44202
+  order: 1
+  width: 0
+  height: 0
+  passthru: false
+  label: Capture video
+  color: ''
+  bgcolor: ''
+  icon: ''
+  payload: ''
+  payloadType: str
+  topic: ''
+  x: 824.5999908447266
+  'y': 1374.1333379745483
+  wires:
+    - - 9825d013.b8cae
+- id: e81a4397.150d5
+  type: comment
+  z: 76bc20aa.0e9
+  name: Video capture
+  info: |-
+    This section of the flow captures a fixed length 
+    video of the RTSP feed.
+    It works very similar to the frame capture above,
+    the only main difference is the parameters in the
+    commmand line.
+  x: 830
+  'y': 1320
+  wires: []
+- id: 9825d013.b8cae
+  type: change
+  z: 76bc20aa.0e9
+  name: Set filename
+  rules:
+    - t: set
+      p: payload
+      pt: msg
+      to: /home/pi/node-red-static/video.mp4
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 1010
+  'y': 1380
+  wires:
+    - - 34496a78.56a486
+- id: eafcd535.9c0038
+  type: function
+  z: 76bc20aa.0e9
+  name: Video capture
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "video_"+yyyy+mm+dd+"-"+hh+mm+ss+".mp4";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "store";                                        // Flag to store this image in the DB
+    msg.type = "videotest";                                     // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 1040
+  'y': 1500
+  wires:
+    - - 34496a78.56a486
+- id: 6fe8fc3a.f39794
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 840
+  'y': 1500
+  wires:
+    - - eafcd535.9c0038
+- id: 7875ef61.dc2da
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: true
+  console: 'false'
+  complete: 'true'
+  x: 1790
+  'y': 1140
+  wires: []
+- id: 2f71d33b.15c9ec
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 1140
+  'y': 1100
+  wires:
+    - - 48ebcfa9.96dd3
+- id: c170552d.271598
+  type: exec
+  z: 76bc20aa.0e9
+  command: 'avconv -i rtsp://user:password@192.168.1.71:554/ch01.264 -r 10 -t 30 -y -vcodec copy -an '
+  addpay: true
+  append: ''
+  useSpawn: 'false'
+  timer: ''
+  oldrc: false
+  name: Capture video
+  x: 1560
+  'y': 1060
+  wires:
+    - - 63f16d1c.7d4704
+      - 4d5681e0.627ae
+    - - 2b7c7e0c.8b8e92
+    - - 7875ef61.dc2da
+      - 8aadcdd.f77543
+- id: 63f16d1c.7d4704
+  type: ui_template
+  z: 76bc20aa.0e9
+  group: 76aa30ec.44202
+  name: Video link
+  order: 2
+  width: 0
+  height: 0
+  format: |-
+    <div height="70" style="height: 70px;">
+    <a href="/video.mp4" target="_blank">Open video</a>
+    </div>
+  storeOutMessages: true
+  fwdInMessages: true
+  templateScope: local
+  x: 1800
+  'y': 1020
+  wires:
+    - []
+- id: 4d5681e0.627ae
+  type: debug
+  z: 76bc20aa.0e9
+  name: ''
+  active: true
+  console: 'false'
+  complete: 'true'
+  x: 1790
+  'y': 1060
+  wires: []
+- id: 2b7c7e0c.8b8e92
+  type: file
+  z: 76bc20aa.0e9
+  name: ''
+  filename: /home/pi/avconv.out
+  appendNewline: true
+  createDir: false
+  overwriteFile: 'true'
+  x: 1840
+  'y': 1100
+  wires:
+    - []
+- id: 8aadcdd.f77543
+  type: function
+  z: 76bc20aa.0e9
+  name: Statistics
+  func: >+
+    var now = new Date();
+
+    var stat = context.get("stat");
+
+    if (stat===undefined) {
+        // Initialize the object in case NR restart
+        stat = { "count": 0, "success": 0, "rate": 0.0, "last": now};
+    }
+
+    if (msg.topic==="reset") {
+        // Reset message was received: reset statistics
+        stat = { "count": 0, "success": 0, "rate": 0.0, "last": now};
+    } else {
+        // Update statistics
+        stat.count++;
+        if (msg.payload.code===0) {
+            stat.success++;
+        }    
+        stat.rate=stat.success/stat.count;
+        stat.last=now;
+    }
+
+
+    // Create formatted time
+
+    var yyyy = now.getFullYear();
+
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+
+    msg.formattedtime = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;
+
+    msg.success = stat.success;
+
+    msg.rate = Math.floor(stat.rate*100);
+
+
+    node.status({fill:"blue",shape:"ring",text:"Videos: "+msg.success+" | "+msg.rate+"% | Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":"
+    + ss});
+
+
+
+    // Saving data in the context
+
+    context.set("stat",stat);
+
+
+    return msg;
+
+
+  outputs: 1
+  noerr: 0
+  x: 1680
+  'y': 1260
+  wires:
+    - - a00661da.c0cc2
+      - 283bb99c.1a7516
+      - 13844f38.602271
+- id: 459cf2cd.4ee6ec
+  type: inject
+  z: 76bc20aa.0e9
+  name: Reset stat
+  topic: reset
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 1480
+  'y': 1260
+  wires:
+    - - 8aadcdd.f77543
+- id: a00661da.c0cc2
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: c9626ef.839809
+  order: 1
+  width: 0
+  height: 0
+  name: Video Last time
+  label: Last grab
+  format: '{{msg.formattedtime}}'
+  layout: row-spread
+  x: 1900
+  'y': 1180
+  wires: []
+- id: 283bb99c.1a7516
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: c9626ef.839809
+  order: 2
+  width: 0
+  height: 0
+  name: Video count
+  label: Video files
+  format: '{{msg.success}}'
+  layout: row-spread
+  x: 1890
+  'y': 1220
+  wires: []
+- id: 13844f38.602271
+  type: ui_text
+  z: 76bc20aa.0e9
+  group: c9626ef.839809
+  order: 3
+  width: 0
+  height: 0
+  name: Video Success rate
+  label: Success rate
+  format: '{{msg.rate}} %'
+  layout: row-spread
+  x: 1910
+  'y': 1260
+  wires: []
+- id: 12c6b453.dff78c
+  type: ui_button
+  z: 76bc20aa.0e9
+  name: Capture
+  group: 76aa30ec.44202
+  order: 1
+  width: 0
+  height: 0
+  passthru: false
+  label: Capture video
+  color: ''
+  bgcolor: ''
+  icon: ''
+  payload: ''
+  payloadType: str
+  topic: ''
+  x: 1124.5999908447266
+  'y': 1054.1333379745483
+  wires:
+    - - 48ebcfa9.96dd3
+- id: 8e42d11e.7212e
+  type: comment
+  z: 76bc20aa.0e9
+  name: Video capture
+  info: |-
+    This section of the flow captures a fixed length 
+    video of the RTSP feed.
+    It works very similar to the frame capture above,
+    the only main difference is the parameters in the
+    commmand line.
+  x: 1130
+  'y': 1000
+  wires: []
+- id: 48ebcfa9.96dd3
+  type: change
+  z: 76bc20aa.0e9
+  name: Set filename
+  rules:
+    - t: set
+      p: payload
+      pt: msg
+      to: /home/pi/node-red-static/video.mp4
+      tot: str
+  action: ''
+  property: ''
+  from: ''
+  to: ''
+  reg: false
+  x: 1310
+  'y': 1060
+  wires:
+    - - c170552d.271598
+- id: e2893648.5e0e38
+  type: function
+  z: 76bc20aa.0e9
+  name: Video capture
+  func: |-
+    var now = new Date();
+    // Create formatted time
+    var yyyy = now.getFullYear();
+    var mm = now.getMonth() < 9 ? "0" + (now.getMonth() + 1) : (now.getMonth() + 1); // getMonth() is zero-based
+    var dd  = now.getDate() < 10 ? "0" + now.getDate() : now.getDate();
+    var hh = now.getHours() < 10 ? "0" + now.getHours() : now.getHours();
+    var mmm  = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
+    var ss  = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
+
+    // Last update: "+dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss});
+
+    // file path with / at the end
+    var path = "/home/pi/node-red-static/";                     // This is the path
+    var filename = "video_"+yyyy+mm+dd+"-"+hh+mm+ss+".mp4";     // file name
+    msg.payload = path + filename;                              // pass the full path to payload for the exec node to add to the end of the command
+    msg.file = filename;                                        // To be used later to store the information in the DB
+    msg.path = path;                                            // Same as above
+    msg.wwwpath = "/";                                          // Same as above
+    msg.topic = "store";                                        // Flag to store this image in the DB
+    msg.type = "videotest";                                     // Image type e.g. Front camera, etc.
+    msg.epoch = now.getTime();                                  // Current timestamp
+    msg.formatteddate = dd + "." + mm + "." + yyyy + " " + hh + ":" + mmm + ":" + ss;   // Formatted timestamp to be used later
+
+    return msg;
+  outputs: 1
+  noerr: 0
+  x: 1340
+  'y': 1180
+  wires:
+    - - c170552d.271598
+- id: 9e65f48.0000f08
+  type: inject
+  z: 76bc20aa.0e9
+  name: ''
+  topic: ''
+  payload: ''
+  payloadType: date
+  repeat: ''
+  crontab: ''
+  once: false
+  x: 1140
+  'y': 1180
+  wires:
+    - - e2893648.5e0e38
