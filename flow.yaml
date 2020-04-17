@@ -419,6 +419,7 @@
   name: ''
   func: |-
     node.warn(msg.payload);
+    node.warn("teszt 3");
     return msg;
   outputs: 1
   noerr: 0
